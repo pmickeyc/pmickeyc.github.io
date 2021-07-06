@@ -1,0 +1,50 @@
+
+h1{
+    color:antiquewhite;	
+    text-align:center;
+}
+h2{
+    color:antiquewhite;
+    
+}
+h3{
+    color:antiquewhite;
+}
+p{
+    color:whitesmoke;
+}
+
+.headings{
+    text-align: center;
+}
+.underline{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.square{
+    list-style-type: square;
+}
+ul{
+    text-align:left;
+    color:antiquewhite;	
+    list-style-type: circle;
+}
+div{
+    color:antiquewhite;
+    justify-content: flex-start;
+    border:2px;
+}
+body{
+    text-align:center;
+    background:black;
+    font-family:Helvetica;	
+}
+.row {
+    margin-top:50px;
+    min-height:50px;
+    justify-content: space-between;
+}
+a{
+    color:antiquewhite;
+    text-decoration: none;
+}
