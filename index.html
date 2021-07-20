@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>My CV</title>
+    <head>
+        <title>Rock, paper, scissors game</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="css/style.css"/>
-	</head>
-		<body>
-            <div class="container">
-                <div class="row">
+        <link rel ="Stylesheet" href="style.css"/>
+        <script src="JScript.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class = "row">
                     <div class="col-lg-12">
-                        <h1 class="headings"><a href="index.html">Padraig McCauley</a></h1>
+                        <h3>Welcome to ROCK, PAPER, SCISSORS!</h3>
                     </div>
+            </div>
+            <div class="row" id="buttons">
+                <div class ="col-lg-3">
+                    <img src="images/rock.jpg" alt="rock">
                 </div>
-
-                <div class="row">
-                    <div class="col-lg-3">
-                        <h2 class="headings"><a href="webpages/contact.html"a>Contact</a></h3>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <h2 class="headings"><a href="webpages/education.html"a>Education</a></h2>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <h2 class="headings"><a href="webpages/skills.html"a>Skills</a></h2>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <h2 class="headings"><a href="webpages/experience.html"a>Experience</a></h2>
-                    </div>
+                <div class ="col-lg-3">
+                    <img src="images/paper.jpg" alt="paper">
                 </div>
-
-			</div>
-		</body>	
+                <div class ="col-lg-3">
+                    <img src="images/scissors.jpg" alt="scissors">
+                </div>
+            </div>
+            <div class="row" id="buttons">
+                <div class ="col-lg-3">
+                    <button type ="button" onclick="rockBtn()">Rock</button>
+                </div>
+                <div class ="col-lg-3">
+                    <button type ="button" onclick="paperBtn()">Paper</button>
+                </div>
+                <div class ="col-lg-3">
+                    <button type="button" onclick="scissorsBtn()">Scissors</button>
+                </div>
+                <h1 id="demo"></h1>
+            </div>
+        </div>
+    </body>
 </html>
