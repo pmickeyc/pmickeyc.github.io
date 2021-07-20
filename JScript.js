@@ -5,44 +5,41 @@ var cmpNum;
 var randomInt;
 
 function ranInt(){
-    randomInt = Math.floor(Math.random() * (3 + 1));
+    randomInt = Math.floor(Math.random() * (3 ) + 1);
     return randomInt;
 }
 
 function picker(){
     ranInt();
-	cmpNum = randomInt;
 
-	if (cmpNum == 1){
+	if (randomInt == 1){
 		cmp = "rock";
 	}
-	else if (cmpNum == 2){
+	else if (randomInt == 2){
 		cmp = "paper";
 	}
-	else if (cmpNum == 3){
+	else if (randomInt == 3){
 		cmp = "scissors";
 	}
 }
 	
 function rockBtn(){
 	btn = "rock";
-    picker();
     game();
 }
 
 function paperBtn(){
 	btn = "paper";
-    picker();
     game();
 }
 
 function scissorsBtn(){
 	btn = "scissors";
-    picker();
     game();
 }
 
 function game(){
+    picker();
     user = btn;
 
     if (user == "rock"){
@@ -71,7 +68,7 @@ function game(){
         if (cmp == "paper"){
             document.getElementById("demo").innerHTML = "The computer chose " + cmp + ". User wins";
         }
-        else if (cmp = "scissors"){
+        else if (cmp == "scissors"){
             document.getElementById("demo").innerHTML = "The computer chose " + cmp + ". It is a tie";
         }
         else if (cmp == "rock"){
