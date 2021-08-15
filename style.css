@@ -66,7 +66,7 @@ p{
     /* background: #CE6EA6;
      */
 	text-align: center;
-	background-image:url(images/meditation.jpg);
+	background-image:url(images/meditation.webp);
 	background-size:cover;
 	background-position: 50% 50%;
 	justify-content:space-between;
@@ -101,14 +101,14 @@ p{
 #sectionTwo{
 	background: #DBF2FF;
 	text-align:right;
-	/* background-image:url(images/forest.jpg);
+	/* background-image:url(images/forest.webp);
 	background-size:cover;*/
 	color:#2F4858 
 	/* text-shadow: 0 0 2px black; */
 }
 #sectionThree{
     /* background: #BFA6A2;*/
-	background-image:url(images/meditation2.jpg);
+	background-image:url(images/meditation2.webp);
 	background-size:cover;
     /* text-shadow: 0 0 2px black;*/
 	text-align:left;
