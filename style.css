@@ -63,8 +63,6 @@ p{
 	padding-top: 60px;
 }
 #sectionOne {
-    /* background: #CE6EA6;
-     */
 	text-align: center;
 	background-image:url(images/meditation.webp);
 	background-size:cover;
@@ -101,27 +99,20 @@ p{
 #sectionTwo{
 	background: #DBF2FF;
 	text-align:right;
-	/* background-image:url(images/forest.webp);
-	background-size:cover;*/
 	color:#2F4858 
-	/* text-shadow: 0 0 2px black; */
 }
 #sectionThree{
-    /* background: #BFA6A2;*/
 	background-image:url(images/meditation2.webp);
 	background-size:cover;
-    /* text-shadow: 0 0 2px black;*/
 	text-align:left;
 	font-size:1.5em;
 	font-weight:bold;
-    /* color:#2F4858;*/
 	padding: 15em 0em;
 	color:#F3EED9;
 }
 #sectionFour{
 	background: #DBF2FF;
 	text-align:right;
-    /* text-shadow: 0 0 6px black;*/
 	justify-content:space-between;
 	padding: 6em 0em;
 	color:#2F4858;
@@ -131,14 +122,8 @@ p{
 	background:#F3EED9;
 	text-align:center;
 	color:#2F4858;
-    /* color:white;
-	text-shadow: 0 0 6px black;*/
 	text-decoration: none;
 }
-/* #sectionFive ul{
-     text-align:center;
-}
- */
 .sections{
 	padding: 3em 0;
 	overflow:hidden;
