@@ -202,7 +202,7 @@ img:hover{
 	justify-content: center;
 	align-items: baseline;
 	text-align:center;
-	animation: fade 10s;
+	animation: fade 20s;
 }
 @keyframes fade{
 	0% {
