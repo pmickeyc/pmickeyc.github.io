@@ -7,6 +7,39 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/* Cover modal content and any panels that are set as white
+.modal-content,
+.modal-content *,
+.panel,
+.panel *,
+header,
+header *,
+section,
+section *,
+article,
+article *
+{
+  background-color: #c8ced2 !important; /* Change #e0e0e0 to your desired color 
+  background: #c8ced2 !important;
+
+  border-bottom-color: #c8ced2 !important; /* New color for arrow 
+}
+
+/* .icon, .icon:after, a.icon.solid {
+  color: #e0e0e0 !important;
+} 
+
+/* Override the nav arrow color, both inactive and active states 
+#nav a:after,
+#nav a.active:after,
+article::before,
+#nav .icon:before,
+#nav .icon, .icon:after, a.icon.solid {
+  border-bottom-color: #c8ced2 !important; /* New color for arrow 
+} */
+
+
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -38,6 +71,22 @@ body {
 ol, ul {
 	list-style: none;
 }
+
+/* Ensure the container clips overflow so the scaling stays neat */
+.image.fit {
+	overflow: hidden;
+  }
+  
+  /* Set up a smooth transition for the image */
+  .image.fit img {
+	transition: transform 0.3s ease;
+  }
+  
+  /* Scale up the image a bit on hover */
+  .image.fit:hover img {
+	transform: scale(1.05);
+  }
+  
 
 blockquote, q {
 	quotes: none;
@@ -259,6 +308,33 @@ input, select, textarea {
 	padding-top: 2.5em;
 }
 
+
+/* 1. Ensure each icon is an inline-block so it can be transformed */
+.social-icons a {
+	display: inline-block;
+
+  }
+  
+  /* 2. On hover, run our keyframe animation one time */
+  .social-icons a:hover {
+	animation: growShrink 0.3s ease;
+  }
+  
+  /* 3. Keyframes for a quick grow-shrink effect */
+  @keyframes growShrink {
+	0% {
+	  transform: scale(1);
+	}
+	50% {
+	  transform: scale(1.2);
+	}
+	100% {
+	  transform: scale(1);
+	}
+  }
+  
+
+
 /* Basic */
 
 html {
@@ -269,10 +345,12 @@ html {
 }
 body {
 	background-image: url("images/overlay.png"), url("images/bg.jpg");
+	/* background-image: url("images/overlay.png"), url("images/alt_background.png"); */
 	background-repeat: repeat, no-repeat;
 	background-size: auto, 100% 100%;
 	background-attachment: fixed;
 	overflow-y: scroll;
+	color:#42474b !important;
 }
 body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 	-moz-animation: none !important;
@@ -287,7 +365,7 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 body, input, textarea, select {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 300;
-	color: #777777;
+	color: #42474b;
 	font-size: 20pt;
 	line-height: 1.75em;
 }
@@ -313,7 +391,7 @@ body, input, textarea, select {
 }
 strong, b, h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
-	color: #363636;
+	color: #42474b;
 }
 h1 {
 	font-size: 2.4em;
@@ -1053,3 +1131,10 @@ body.is-preload #wrapper {
 .modal .close:focus {
   color: #000;
 }
+
+
+/* Replace all white backgrounds (#fff or #ffffff) with your new color */
+/* body,
+#main,
+-#main *, */
+
