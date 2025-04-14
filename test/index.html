@@ -332,52 +332,108 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-
-	<!-- Your page content ... -->
+  
 	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-		  // Select the contact nav icon by targeting the anchor whose href is "#contact"
-		  const contactNav = document.querySelector('nav a[href="#contact"]');
-		  
-		  function unlockAudio() {
-			const AudioContext = window.AudioContext || window.webkitAudioContext;
-			if (AudioContext) {
-			  const audioContext = new AudioContext();
-			  // Create and play a silent buffer to unlock audio
-			  const buffer = audioContext.createBuffer(1, 1, 22050);
-			  const source = audioContext.createBufferSource();
-			  source.buffer = buffer;
-			  source.connect(audioContext.destination);
-			  source.start(0);
-			}
-			// Remove the event listener so it only triggers once
-			contactNav.removeEventListener('click', unlockAudio);
-		  }
-		
-		  if (contactNav) {
-			contactNav.addEventListener('click', unlockAudio);
-		  }
+	document.addEventListener('DOMContentLoaded', function () {
+	// Find all .modal elements
+	const modals = document.querySelectorAll('.modal');
+
+	modals.forEach(modal => {
+		modal.addEventListener('click', (event) => {
+		// If the user clicked directly on the overlay (not the modal content)
+		if (event.target === modal) {
+			closeModal(modal.id);
+		}
 		});
-		</script>
-  <script>
+	});
+	});
+	
+	// Unlock audio on contact click
+	document.addEventListener('DOMContentLoaded', () => {
+	  const contactNav = document.querySelector('nav a[href="#contact"]');
+	  function unlockAudio() {
+		const AudioContext = window.AudioContext || window.webkitAudioContext;
+		if (AudioContext) {
+		  const audioContext = new AudioContext();
+		  const buffer = audioContext.createBuffer(1, 1, 22050);
+		  const source = audioContext.createBufferSource();
+		  source.buffer = buffer;
+		  source.connect(audioContext.destination);
+		  source.start(0);
+		}
+		contactNav.removeEventListener('click', unlockAudio);
+	  }
+	  if (contactNav) {
+		contactNav.addEventListener('click', unlockAudio);
+	  }
+	});
+  
+	// Hover sound effect
 	document.addEventListener('DOMContentLoaded', function () {
 	  const soundElements = document.querySelectorAll('[data-sound]');
-	
 	  soundElements.forEach(el => {
 		const soundUrl = el.getAttribute('data-sound');
 		if (soundUrl) {
 		  const audio = new Audio(soundUrl);
 		  audio.preload = 'auto';
-	
 		  el.addEventListener('mouseenter', function () {
-			// Attempt to play only after user has clicked the 'enable sound' button
 			audio.currentTime = 0;
 			audio.play().catch(err => console.error('Audio play error:', err));
 		  });
 		}
 	  });
 	});
+  
+	// Pause any local domain video elements (if you have them) 
+	// by scanning inside iframes for <video> tags (same-domain only),
+	// plus direct <video> tags in your HTML.
+	function pauseAllVideos() {
+	  $('iframe').contents().find('video').each(function () {
+		this.pause();
+	  });
+	  $('video').each(function () {
+		this.pause();
+	  });
+	}
+  
+	// Closes the given modal by ID, forcibly removing any iframe src to stop cross-domain videos
+	function closeModal(modalId) {
+	  const modal = document.getElementById(modalId);
+	  if (!modal) {
+		console.error('Modal with id "' + modalId + '" not found.');
+		return;
+	  }
+  
+	  // Remove the src from iframes so the embedded videos stop
+	  const iframes = modal.getElementsByTagName('iframe');
+	  for (let i = 0; i < iframes.length; i++) {
+		// Optionally store the src in data-src if you want to restore it on reopen:
+		iframes[i].setAttribute('data-src', iframes[i].src);
+		iframes[i].src = '';
+	  }
+  
+	  modal.style.display = 'none';
+	  // Attempt to pause any same-domain HTML5 videos
+	  pauseAllVideos();
+	}
+  
+	// Opens the given modal by ID
+	function openModal(modalId) {
+	  const modal = document.getElementById(modalId);
+	  if (!modal) return;
+  
+	  // Restore iframe src if previously removed
+	  const iframes = modal.getElementsByTagName('iframe');
+	  for (let i = 0; i < iframes.length; i++) {
+		const savedSrc = iframes[i].getAttribute('data-src');
+		if (savedSrc) {
+		  iframes[i].src = savedSrc;
+		}
+	  }
+  
+	  modal.style.display = 'block';
+	}
 	</script>
-	
-</body>
-</html>
+  
+  </body>
+  </html>
