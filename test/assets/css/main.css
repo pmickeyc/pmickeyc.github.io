@@ -871,6 +871,48 @@ body.is-preload #wrapper {
 		max-width: calc(100% - 2em);
 	}
 }
+
+
+/* ─────────────────────────────────────────────
+   KEEP SOCIAL ICONS ON‑SCREEN (≤ 480 px wide)
+   – switch to flex, let them wrap, centre them
+─────────────────────────────────────────────── */
+@media screen and (max-width: 480px) {
+
+	/* 1. Make sure the panel itself never exceeds
+		  the viewport and that its padding counts
+		  inside that width                         */
+	#contact,
+	#main > .panel#contact {
+	  width: 100vw;
+	  max-width: 100vw;
+	  box-sizing: border-box;
+	  padding: 2.5em 1em;        /* slimmer side‑padding */
+	}
+  
+	/* 2. Kill the arrow‑notch that adds extra width */
+	#contact::before,
+	#main > .panel#contact::before { content: none; }
+  
+	/* 3. Lay the icons out with flexbox             */
+	.social-icons {                 /* <ul> or <div> wrapper */
+	  display: flex;
+	  flex-wrap: wrap;              /* allows a second row if needed */
+	  justify-content: center;      /* centres the whole group       */
+	  gap: 1.25em;                  /* even spacing between icons    */
+	  margin: 0;                    /* remove any default <ul> space */
+	}
+  
+	/* 4. Shrink the icons a touch so four or five
+		  can sit happily on one line               */
+	.social-icons a {
+	  font-size: 1.9rem;            /* adjust to taste */
+	}
+  
+	/* 5. Safety‑net: no sideways scrolling at all  */
+	html, body { overflow-x: hidden; }
+  }
+  
 @media screen and (max-width: 360px) {
 	#wrapper {
 		padding: 1em 0;
