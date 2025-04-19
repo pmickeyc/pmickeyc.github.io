@@ -1,47 +1,485 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Coming Soon</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      font-family: sans-serif;
-      color: #fff;
-    }
-
-    .container {
-      display: flex;
-      align-items: center;
-      gap: 20px; /* Adjust the spacing between the two texts here */
-    }
-
-    .coming-soon {
-      font-size: 3rem;
-      animation: fadeInOut 2s ease-in-out infinite;
-    }
-
-    @keyframes fadeInOut {
-      0%   { opacity: 1; }
-      50%  { opacity: 0.2; }
-      100% { opacity: 1; }
-    }
-  </style>
+	<title>Yulia Protasova</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" type="image/x-icon" href="/images/favicon.png">
+	<!-- <noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript> -->
 </head>
-<body>
-  <div class="container">
-    <div class="coming-soon">Coming Soon</div>
-  </div>
 
-  <script>
-    // No JavaScript needed for this effect
-  </script>
+<body class="is-preload">
+
+	<!-- Wrapper-->
+	<div id="wrapper">
+
+		<!-- Nav -->
+		<nav id="nav">
+			<a href="#home" class="icon solid fa-home"><span>Home</span></a>
+			<a href="#news" class="icon solid fa-newspaper"><span>News</span></a>
+			<a href="#work" class="icon solid fa-film"><span>Work</span></a>
+			<a href="#audio" class="icon solid fa-music"><span>Audio</span></a>
+			<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Me -->
+			<article id="home" class="panel intro">
+				<header>
+					<h1>Yulia Protasova</h1>
+					<!-- <p>Senior Astral Projectionist</p> -->
+					<p>
+						Yulia Protasova is a Ukrainian composer and pianist based in Valencia and
+						Barcelona, Spain. She composes music for film, television, video games, and other
+						media. Winner of the SGAE Award for Best Original Soundtrack at the Sitges
+						International Film Festival 2024.
+					</p>
+				</header>
+				<a href="#news" class="jumplink pic">
+					<!-- <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span> -->
+					<img src="images/me.webp" loading="lazy" alt="" />
+				</a>
+			</article>
+
+			<!-- News (new section) -->
+			<article id="news" class="panel">
+				<header>
+					<h2>Coming soon</h2>
+				</header>
+				<strong>Short film:</strong>
+				<ul>
+
+					<li><strong>El cantar de las calles</strong> by Toni Salud Garcia</li>
+					<li><strong>El Remedio</strong> by David Aparicio</li>
+					<li><strong>Decir Adiós</strong> by Sebastián Borjas Villalobos</li>
+				</ul>
+
+				<p><strong>Documentaries:</strong>
+					<br>
+					Gerard Pastor and Yulia Protasova have begun scoring two
+					post-production projects for Kaboga Art & Films. The works include <strong><em>Cirk</em></strong>, a
+					documentary series by director Alejandro Cabrera (created by dieciseisbis), and
+					<strong><em>3 Voltes Rebel</em></strong>, a documentary by director Anna Maria Bofarull (produced by
+					Anna M. Bofarull).
+				</p>
+			</article>
+
+			<!-- Work -->
+			<article id="work" class="panel">
+				<header>
+					<h2>Work</h2>
+					<p>Click posters for more information</p>
+				</header>
+				<section>
+					<div class="row">
+						<div class="col-4 col-6-medium col-12-small">
+							<a href="javascript:void(0)" class="image fit" onclick="openModal('modal-beauty')">
+								<img src="images/1.webp" loading="lazy" alt="beauty Poster">
+							</a>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<a href="javascript:void(0)" class="image fit" onclick="openModal('modal-de-sastre')">
+								<img src="images/2.webp" loading="lazy" alt="El Remedio Poster">
+							</a>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<a href="javascript:void(0)" class="image fit" onclick="openModal('modal-parasomnia')">
+								<img src="images/3.webp" loading="lazy" alt="Decir Adiós Poster">
+							</a>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<a href="javascript:void(0)" class="image fit" onclick="openModal('modal-llet')">
+								<img src="images/4.webp" loading="lazy" alt="Poster 4">
+							</a>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<a href="javascript:void(0)" class="image fit" onclick="openModal('modal-mallas')">
+								<img src="images/5.webp" loading="lazy" alt="Poster 5">
+							</a>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<a href="javascript:void(0)" class="image fit" onclick="openModal('modal-gokotta')">
+								<img src="images/6.webp" loading="lazy" alt="Poster 6">
+							</a>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<a href="javascript:void(0)" class="image fit" onclick="openModal('modal-sci-fi')">
+								<img src="images/7.webp" loading="lazy" alt="Poster 7">
+							</a>
+						</div>
+					</div>
+				</section>
+			</article>
+
+			<!-- Audio -->
+			<article id="audio" class="panel">
+				<header>
+					<h2>Audio</h2>
+				</header>
+				<section>
+					<div class="row">
+
+						<!-- SoundCloud 1 (already updated) -->
+						<div class="col-6 col-12-medium col-12-small">
+							<div class="iframe-wrapper iframe-wrapper--audio">
+								<iframe scrolling="no" allow="autoplay"
+									src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/693956866&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+								</iframe>
+							</div>
+						</div>
+
+						<!-- SoundCloud 2 -->
+						<div class="col-6 col-12-medium col-12-small">
+							<div class="iframe-wrapper iframe-wrapper--audio">
+								<iframe scrolling="no" allow="autoplay"
+									src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1907707919&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+								</iframe>
+							</div>
+						</div>
+
+						<!-- SoundCloud 3 -->
+						<div class="col-6 col-12-medium col-12-small">
+							<div class="iframe-wrapper iframe-wrapper--audio">
+								<iframe scrolling="no" allow="autoplay"
+									src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2009108499&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+								</iframe>
+							</div>
+						</div>
+
+						<!-- SoundCloud 4 -->
+						<div class="col-6 col-12-medium col-12-small">
+							<div class="iframe-wrapper iframe-wrapper--audio">
+								<iframe scrolling="no" allow="autoplay"
+									src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1996585471&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+								</iframe>
+							</div>
+						</div>
+
+						<!-- Spotify 1 -->
+						<div class="col-6 col-12-medium col-12-small">
+							<div class="iframe-wrapper iframe-wrapper--spotify">
+								<iframe loading="lazy"
+									allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+									src="https://open.spotify.com/embed/track/4hZSOpwc6BuEK9s1CMwdbm?utm_source=oembed">
+								</iframe>
+							</div>
+						</div>
+
+						<!-- Spotify 2 -->
+						<div class="col-6 col-12-medium col-12-small">
+							<div class="iframe-wrapper iframe-wrapper--spotify">
+								<iframe loading="lazy"
+									allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+									src="https://open.spotify.com/embed/track/3jEsPeFc6dyCTn2BbMfx9v?utm_source=oembed">
+								</iframe>
+							</div>
+						</div>
+
+
+					</div>
+				</section>
+			</article>
+
+
+			<!-- Contact -->
+			<article id="contact" class="panel">
+				<header>
+					<h2>Contact Me</h2>
+				</header>
+				<p>Feel free to reach out via email or connect with me on social media:</p>
+				<div class="social-icons"
+					style="display: flex; justify-content: center; align-items: center; gap: 40px; font-size: 3em; padding: 20px 0;">
+					<a href="mailto:yulia.protasova20@gmail.com" class="icon solid fa-envelope"
+						data-sound="assets/sounds/1.mp3"
+						style="color: #555; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+					</a>
+					<a href="https://www.instagram.com/yulia.protasova_/" class="icon brands fa-instagram"
+						data-sound="assets/sounds/2.mp3"
+						style="color: #E4405F; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+					</a>
+					<a href="https://soundcloud.com/user-535768061" class="icon brands fa-soundcloud"
+						data-sound="assets/sounds/3.mp3"
+						style="color: #FF5500; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+					</a>
+					<a href="https://www.youtube.com/@yuliyaprotasova1597" class="icon brands fa-youtube"
+						data-sound="assets/sounds/4.mp3"
+						style="color: #FF0000; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+					</a>
+					<a href="https://open.spotify.com/intl-es/artist/4pKG6fN8goQ6HLmZhB9sUF"
+						class="icon brands fa-spotify" data-sound="assets/sounds/5.mp3"
+						style="color: #1DB954; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+					</a>
+					<a href="https://www.imdb.com/name/nm14666745/" class="icon brands fa-imdb"
+						data-sound="assets/sounds/6.mp3"
+						style="color: #f6c613; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+					</a>
+				</div>
+			</article>
+		</div>
+
+	</div>
+
+	<!-- Modals for first three short films -->
+	<div id="modal-beauty" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal('modal-beauty')">&times;</span>
+			<h3>Beauty</h3>
+			<p>
+				<strong>Short film | 2024 | Drama</strong><br>
+				<strong>Directed by:</strong> Aitana Belda Camós, Aroa Celdrán López, Carmen Castrelo Díez,
+				Carla Martínez Moreno, Lewis Sánchez Robles<br>
+				<strong>Music:</strong> Yulia Protasova<br><br>
+				A deer runs for its life in a forest awash with death.
+			</p>
+
+			<div class="iframe-wrapper">
+				<iframe loading="lazy" allow="autoplay"
+					src="https://drive.google.com/file/d/1hX-aTnzLu4douctXhbakTqCSZzkpYy0K/preview">
+				</iframe>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal-de-sastre" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal('modal-de-sastre')">&times;</span>
+			<h3>De‑Sastre</h3>
+			<p>
+				<strong>Short film | 2024 | Comedy – Fantasy</strong><br>
+				<strong>Directed by:</strong> Tommaso Mangiacotti, Marolyn Ávila, Constanza Melio,
+				María‑Antonieta Fernández, Kuang Yi Lee<br>
+				<strong>Music:</strong> Yulia Protasova<br><br>
+				Daniela (27) has just moved into an old apartment and is ready to make it her new home…
+			</p>
+
+			<div class="iframe-wrapper">
+				<iframe loading="lazy" allow="autoplay"
+					src="https://drive.google.com/file/d/1QBF0ff7lGqk40d0BnezGFlDrug71JicS/preview">
+				</iframe>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal-parasomnia" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal('modal-parasomnia')">&times;</span>
+			<h3>Parasomnia</h3>
+			<p>
+				<strong>Short film | 2024 | Horror – Fantasy</strong><br>
+				<strong>Directed by:</strong> Daniel Noblom<br>
+				<strong>Music:</strong> Yulia Protasova<br><br>
+				As the traffic light turns green, a young man is paralyzed when he’s about to cross the street…
+			</p>
+
+			<div class="iframe-wrapper">
+				<iframe loading="lazy" allow="autoplay"
+					src="https://drive.google.com/file/d/1rEBItTrvDWBx5ue39jCsrtl9mdReFul7/preview">
+				</iframe>
+			</div>
+		</div>
+	</div>
+
+	<!-- New modals -->
+	<div id="modal-llet" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal('modal-llet')">&times;</span>
+			<h3>Llet</h3>
+			<p>
+				<strong>Short film | 2024 | Drama</strong><br>
+				<strong>Directed by:</strong> Maria Estelrich<br>
+				<strong>Music:</strong> Yulia Protasova<br><br>
+				A pregnant woman travels to the countryside to move into a house by herself…
+			</p>
+
+			<div class="iframe-wrapper">
+				<iframe loading="lazy" allow="autoplay"
+					src="https://drive.google.com/file/d/1DhuKgEP6WBZONEPunrPMHCldScd6TcbV/preview">
+				</iframe>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal-mallas" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal('modal-mallas')">&times;</span>
+			<h3>Mallas Hierbas</h3>
+			<p>
+				<strong>Short film | 2024 | Fantasy, Action</strong><br>
+				<strong>Directed by:</strong> Cristina Merino, Mahi Garcia, Aleix Arazo, Ricard Molist, Sandra Martos,
+				Didac Pardo, Eugenio Cuesta<br>
+				<strong>Music:</strong> Yulia Protasova, Nestor Alejandro Salas Mendoza<br><br>
+				A badass granny rages a bloody war against the living dead…
+			</p>
+
+			<div class="iframe-wrapper">
+				<iframe loading="lazy"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+					src="https://www.youtube.com/embed/uZWE-R4sVWA?si=HFcOhx6zpIZ-4xX-">
+				</iframe>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal-gokotta" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal('modal-six')">&times;</span>
+			<h3>Gokotta</h3>
+			<p>
+				<strong>Short film | 2024 | Fantasy</strong><br>
+				<strong>Directed by:</strong> Kay Oceans<br>
+				<strong>Music:</strong> Yulia Protasova
+			</p>
+		</div>
+	</div>
+
+	<div id="modal-sci-fi" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal('modal-sci-fi')">&times;</span>
+			<h3>Cyberpunk Nightcore</h3>
+			<p>
+				<strong>Short film | 2024 | Virtual Production Experimental Film</strong><br>
+				<strong>Directed by:</strong> Guillem Beltrà<br>
+				<strong>Music:</strong> Yulia Protasova<br><br>
+				Step into a world of neon lights and shadows with this experimental short film…
+			</p>
+
+			<div class="iframe-wrapper">
+				<iframe loading="lazy"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+					src="https://www.youtube.com/embed/AD2APZuJo9g?si=K3J4b8SJ0kuCpqIZ">
+				</iframe>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			// Find all .modal elements
+			const modals = document.querySelectorAll('.modal');
+
+			modals.forEach(modal => {
+				modal.addEventListener('click', (event) => {
+					if (event.target === modal) {
+						closeModal(modal.id);
+					}
+				});
+			});
+		});
+
+		// Unlock audio on contact click
+		document.addEventListener('DOMContentLoaded', () => {
+			const contactNav = document.querySelector('nav a[href="#contact"]');
+			function unlockAudio() {
+				const AudioContext = window.AudioContext || window.webkitAudioContext;
+				if (AudioContext) {
+					const audioContext = new AudioContext();
+					const buffer = audioContext.createBuffer(1, 1, 22050);
+					const source = audioContext.createBufferSource();
+					source.buffer = buffer;
+					source.connect(audioContext.destination);
+					source.start(0);
+				}
+				contactNav.removeEventListener('click', unlockAudio);
+			}
+			if (contactNav) {
+				contactNav.addEventListener('click', unlockAudio);
+			}
+		});
+
+		// Hover sound effect
+		document.addEventListener('DOMContentLoaded', function () {
+			const soundElements = document.querySelectorAll('[data-sound]');
+			soundElements.forEach(el => {
+				const soundUrl = el.getAttribute('data-sound');
+				if (soundUrl) {
+					const audio = new Audio(soundUrl);
+					audio.preload = 'auto';
+					el.addEventListener('mouseenter', function () {
+						audio.currentTime = 0;
+						audio.play().catch(err => console.error('Audio play error:', err));
+					});
+				}
+			});
+		});
+
+		function pauseAllVideos() {
+			// Pause <video> tags in the current document
+			document.querySelectorAll('video').forEach(video => {
+				video.pause();
+			});
+
+			// Attempt to pause videos in same-origin iframes
+			const iframes = document.querySelectorAll('iframe');
+			iframes.forEach(iframe => {
+				try {
+					// Cross-origin iframes will throw a security error, so we wrap in try/catch
+					const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+					const iframeVideos = iframeDoc.querySelectorAll('video');
+					iframeVideos.forEach(video => {
+						video.pause();
+					});
+				} catch (e) {
+					// Ignore cross-origin errors
+				}
+			});
+		}
+
+
+		// Closes the given modal by ID, forcibly removing any iframe src to stop cross-domain videos
+		function closeModal(modalId) {
+			const modal = document.getElementById(modalId);
+			if (!modal) {
+				console.error('Modal with id "' + modalId + '" not found.');
+				return;
+			}
+
+			// Remove the src from iframes so the embedded videos stop
+			const iframes = modal.getElementsByTagName('iframe');
+			for (let i = 0; i < iframes.length; i++) {
+				// Optionally store the src in data-src if you want to restore it on reopen:
+				iframes[i].setAttribute('data-src', iframes[i].src);
+				iframes[i].src = '';
+			}
+
+			modal.style.display = 'none';
+			// Attempt to pause any same-domain HTML5 videos
+			pauseAllVideos();
+		}
+
+		// Opens the given modal by ID
+		function openModal(modalId) {
+			const modal = document.getElementById(modalId);
+			if (!modal) return;
+
+			// Restore iframe src if previously removed
+			const iframes = modal.getElementsByTagName('iframe');
+			for (let i = 0; i < iframes.length; i++) {
+				const savedSrc = iframes[i].getAttribute('data-src');
+				if (savedSrc) {
+					iframes[i].src = savedSrc;
+				}
+			}
+
+			modal.style.display = 'block';
+		}
+	</script>
+
 </body>
+
 </html>
