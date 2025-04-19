@@ -75,7 +75,7 @@ section, summary, time, mark, audio, video {
 	position: relative;
   }
   
-  .iframe-wrapper--audio { aspect-ratio: 8 / 5; }   /* (≈ 62.5 %) */
+  .iframe-wrapper--audio { aspect-ratio: 8 / 8; }   /* (≈ 62.5 %) */
   
   @supports not (aspect-ratio: 16/9) {
 	.iframe-wrapper,
@@ -97,10 +97,7 @@ section, summary, time, mark, audio, video {
 	border: 0;
   }
 
-  /* ==============================================
-   COMPACT SPOTIFY EMBED  (152 px tall)
-================================================ */
-.iframe-wrapper--spotify { aspect-ratio: 560 / 362; }         /* ≈ 27.1 % */
+.iframe-wrapper--spotify { aspect-ratio:8 / 8; }         /* ≈ 27.1 % */
 
 @supports not (aspect-ratio: 16/9) {
   .iframe-wrapper--spotify { padding-top: 27.14%; }           /* fallback */
