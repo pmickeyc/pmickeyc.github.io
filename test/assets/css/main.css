@@ -59,6 +59,57 @@ section, summary, time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+/* ==============================================
+   UNIVERSAL, FULL‑WIDTH, RESPONSIVE IFRAMES
+   ----------------------------------------------
+   · Uses modern `aspect-ratio` where available.
+   · Falls back to the classic “padding‑top” hack.
+   · Optional modifier --audio for tall players
+     (e.g. SoundCloud Visual = 8:5 ≈ 62.5 %).
+================================================ */
+
+.iframe-wrapper {
+	/* 1️⃣ modern browsers – done! */
+	aspect-ratio: 16 / 9;
+	width: 100%;
+	position: relative;
+  }
+  
+  .iframe-wrapper--audio { aspect-ratio: 8 / 5; }   /* (≈ 62.5 %) */
+  
+  @supports not (aspect-ratio: 16/9) {
+	.iframe-wrapper,
+	.iframe-wrapper--audio {
+	  height: 0;
+	  padding-top: calc(100% / (16 / 9));            /* 56.25 % */
+	}
+	.iframe-wrapper--audio {
+	  padding-top: calc(100% / (8 / 5));             /* 62.5 %  */
+	}
+  }
+  
+  /* The actual <iframe> */
+  .iframe-wrapper > iframe {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+  }
+
+  /* ==============================================
+   COMPACT SPOTIFY EMBED  (152 px tall)
+================================================ */
+.iframe-wrapper--spotify { aspect-ratio: 560 / 362; }         /* ≈ 27.1 % */
+
+@supports not (aspect-ratio: 16/9) {
+  .iframe-wrapper--spotify { padding-top: 27.14%; }           /* fallback */
+}
+
+/* rounded corners like Spotify’s default */
+.iframe-wrapper--spotify > iframe { border-radius: 12px; }
+
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -1173,6 +1224,29 @@ body.is-preload #wrapper {
 .modal .close:focus {
   color: #000;
 }
+
+/* ─────────────────────────────────────────────
+   FORCE AUDIO TILES TO STACK AT SMALL WIDTHS
+─────────────────────────────────────────────── */
+@media screen and (max-width: 480px) {
+	/* Every col under the #audio section becomes full‑width */
+	#audio .row > .col-6 {
+	  width: 100% !important;
+	  margin-left: 0    !important;
+	}
+  }
+
+  /* ─────────────────────────────────────────────
+   STACK WORK TILES VERTICALLY ON SMALL SCREENS
+─────────────────────────────────────────────── */
+@media screen and (max-width: 480px) {
+	/* Turn every .col-4 in the #work section into 100% width */
+	#work .row > .col-4 {
+	  width: 100% !important;
+	  margin-left: 0 !important;
+	}
+  }
+  
 
 
 /* Replace all white backgrounds (#fff or #ffffff) with your new color */
