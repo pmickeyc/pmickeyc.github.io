@@ -137,6 +137,7 @@ ol, ul {
 
 .news-group h3,
 .work-group h3 {
+	color: var(--tone-page-teal-deep);
 	font-size: 0.9em;
 	font-weight: 700;
 	letter-spacing: 0.16em;
@@ -145,7 +146,7 @@ ol, ul {
 }
 
 .work-group + .work-group {
-	border-top: 1px solid rgba(80, 80, 80, 0.12);
+	border-top: 1px solid rgba(44, 88, 63, 0.18);
 	margin-top: 2.75em;
 	padding-top: 2.25em;
 }
@@ -155,7 +156,7 @@ ol, ul {
 }
 
 .coming-soon-item__title {
-	color: rgba(70, 70, 70, 0.86);
+	color: var(--tone-ink);
 	display: flex;
 	font-size: 0.72em;
 	font-style: normal;
@@ -171,7 +172,7 @@ ol, ul {
 
 .coming-soon-item__poster {
 	aspect-ratio: 3 / 4;
-	background: #efeae3;
+	background: #e7eee9;
 	display: flex;
 	min-height: 18rem;
 	overflow: hidden;
@@ -187,8 +188,8 @@ ol, ul {
 
 .coming-soon-item__poster--placeholder {
 	align-items: center;
-	background: #e8b09e;
-	color: #1f1f1f;
+	background: var(--tone-placeholder);
+	color: var(--tone-placeholder-text);
 	justify-content: center;
 	padding: 1.5em;
 }
@@ -204,6 +205,7 @@ ol, ul {
 }
 
 .coming-soon-item__meta {
+	color: var(--tone-ink-soft);
 	font-size: 0.68em;
 	line-height: 1.65;
 	margin: 0.8em 0 0;
@@ -211,6 +213,7 @@ ol, ul {
 }
 
 .project-label {
+	color: var(--tone-page-brown);
 	font-size: 0.72em;
 	font-weight: 700;
 	letter-spacing: 0.12em;
@@ -470,6 +473,20 @@ input, select, textarea {
 
 /* Basic */
 
+:root {
+	--tone-page-teal: #5e8580;
+	--tone-page-teal-deep: #2f4f4f;
+	--tone-page-green: #355a58;
+	--tone-page-olive: #87711f;
+	--tone-page-brown: #9a8542;
+	--tone-ink-strong: #1f211f;
+	--tone-ink: #343836;
+	--tone-ink-soft: #6c6656;
+	--tone-panel: #e8e4de;
+	--tone-placeholder: #5f7c7c;
+	--tone-placeholder-text: #f2efec;
+}
+
 html {
 	box-sizing: border-box;
 }
@@ -477,13 +494,14 @@ html {
 	box-sizing: inherit;
 }
 body {
-	background-image: url("images/overlay.png"), url("images/bg.jpg");
-	/* background-image: url("images/overlay.png"), url("images/alt_background.png"); */
-	background-repeat: repeat, no-repeat;
-	background-size: auto, 100% 100%;
-	background-attachment: fixed;
+	background-color: var(--tone-page-green);
+	background-image: url("images/overlay.png"), linear-gradient(135deg, rgba(47, 79, 79, 0.86), rgba(154, 133, 66, 0.56)), url("images/bg.jpg");
+	/* background-image: url("images/overlay.png"), linear-gradient(135deg, rgba(47, 79, 79, 0.86), rgba(154, 133, 66, 0.56)), url("images/alt_background.png"); */
+	background-repeat: repeat, no-repeat, no-repeat;
+	background-size: auto, cover, 100% 100%;
+	background-attachment: fixed, fixed, fixed;
 	overflow-y: scroll;
-	color:#42474b !important;
+	color: var(--tone-ink) !important;
 }
 body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 	-moz-animation: none !important;
@@ -498,7 +516,7 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 body, input, textarea, select {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 300;
-	color: #42474b;
+	color: var(--tone-ink);
 	font-size: 20pt;
 	line-height: 1.75em;
 }
@@ -524,7 +542,7 @@ body, input, textarea, select {
 }
 strong, b, h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
-	color: #42474b;
+	color: var(--tone-ink-strong);
 }
 h1 {
 	font-size: 2.4em;
@@ -663,7 +681,7 @@ header {
 }
 header > p {
 	margin: 0.5em 0 0 0;
-	color: #aaa;
+	color: var(--tone-ink-soft);
 }
 @media screen and (max-width: 736px) {
 	header {
@@ -910,7 +928,7 @@ ul.actions li:first-child {
 #nav a span {
 	display: block;
 	position: absolute;
-	background: #222222;
+	background: var(--tone-page-teal-deep);
 	color: #ffffff;
 	top: -2.75em;
 	font-size: 0.3em;
@@ -932,7 +950,7 @@ ul.actions li:first-child {
 	bottom: -0.4em;
 	left: 50%;
 	margin-left: -0.6em;
-	border-top: solid 0.6em #222222;
+	border-top: solid 0.6em var(--tone-page-teal-deep);
 	border-left: solid 0.6em transparent;
 	border-right: solid 0.6em transparent;
 }
@@ -1059,8 +1077,8 @@ body.is-preload #wrapper {
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	background: #ffffff;
-	box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
+	background: var(--tone-panel);
+	box-shadow: 0px 18px 44px rgba(15, 34, 29, 0.22);
 	-moz-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
 	-webkit-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
 	-ms-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
@@ -1149,8 +1167,8 @@ body.is-preload #wrapper {
 	margin-top: -1.375em;
 	width: 2.75em;
 	height: 2.75em;
-	background: #000;
-	background: rgba(0, 0, 0, 0.75);
+	background: var(--tone-page-olive);
+	background: rgba(90, 81, 42, 0.88);
 	color: #ffffff;
 	text-align: center;
 	line-height: 2.75em;
@@ -1192,6 +1210,7 @@ body.is-preload #wrapper {
 	margin-bottom: 0;
 }
 #main > .panel.intro header p {
+	color: var(--tone-ink-strong);
 	letter-spacing: -0.015em;
 	font-size: 1.25em;
 	margin: 0.25em 0 0 0;
@@ -1296,7 +1315,7 @@ body.is-preload #wrapper {
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: var(--tone-panel);
   margin: 5% auto;
   padding: 20px;
   max-width: 600px;
