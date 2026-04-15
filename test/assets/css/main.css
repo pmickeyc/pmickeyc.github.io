@@ -1136,10 +1136,10 @@ body.is-preload #wrapper {
 	-webkit-object-fit: cover;
 	-ms-object-fit: cover;
 	object-fit: cover;
-	-moz-object-position: center;
-	-webkit-object-position: center;
-	-ms-object-position: center;
-	object-position: center;
+	-moz-object-position: center 22%;
+	-webkit-object-position: center 22%;
+	-ms-object-position: center 22%;
+	object-position: center 22%;
 }
 #main > .panel.intro .pic .arrow {
 	display: block;
@@ -1208,6 +1208,12 @@ body.is-preload #wrapper {
 		height: 25em;
 		width: 100%;
 	}
+	#main > .panel.intro .pic img {
+		-moz-object-position: center 16%;
+		-webkit-object-position: center 16%;
+		-ms-object-position: center 16%;
+		object-position: center 16%;
+	}
 	#main > .panel.intro header {
 		padding: 4em;
 		text-align: center;
@@ -1216,6 +1222,12 @@ body.is-preload #wrapper {
 @media screen and (max-width: 736px) {
 	#main > .panel.intro .pic {
 		height: 20em;
+	}
+	#main > .panel.intro .pic img {
+		-moz-object-position: center 12%;
+		-webkit-object-position: center 12%;
+		-ms-object-position: center 12%;
+		object-position: center 12%;
 	}
 	#main > .panel.intro header {
 		padding: 2.75em 2em 2.5em 2em;
