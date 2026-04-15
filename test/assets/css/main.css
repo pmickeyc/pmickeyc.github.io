@@ -131,9 +131,94 @@ ol, ul {
   }
   
   /* Scale up the image a bit on hover */
-  .image.fit:hover img {
+.image.fit:hover img {
 	transform: scale(1.05);
   }
+
+.news-group h3,
+.work-group h3 {
+	font-size: 0.9em;
+	font-weight: 700;
+	letter-spacing: 0.16em;
+	margin-bottom: 1.25em;
+	text-transform: uppercase;
+}
+
+.work-group + .work-group {
+	border-top: 1px solid rgba(80, 80, 80, 0.12);
+	margin-top: 2.75em;
+	padding-top: 2.25em;
+}
+
+.coming-soon-item {
+	height: 100%;
+}
+
+.coming-soon-item__title {
+	color: rgba(70, 70, 70, 0.86);
+	display: flex;
+	font-size: 0.72em;
+	font-style: normal;
+	font-weight: 400;
+	justify-content: center;
+	letter-spacing: 0.04em;
+	line-height: 1.45;
+	margin: 0 0 0.85em 0;
+	min-height: 3em;
+	text-align: center;
+	text-transform: none;
+}
+
+.coming-soon-item__poster {
+	aspect-ratio: 3 / 4;
+	background: #efeae3;
+	display: flex;
+	min-height: 18rem;
+	overflow: hidden;
+	width: 100%;
+}
+
+.coming-soon-item__poster img {
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.coming-soon-item__poster--placeholder {
+	align-items: center;
+	background: #e8b09e;
+	color: #1f1f1f;
+	justify-content: center;
+	padding: 1.5em;
+}
+
+.coming-soon-item__poster--placeholder span {
+	font-size: 1.05em;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 0.06em;
+	line-height: 1.4;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.coming-soon-item__meta {
+	font-size: 0.68em;
+	line-height: 1.65;
+	margin: 0.8em 0 0;
+	text-align: center;
+}
+
+.project-label {
+	font-size: 0.72em;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	line-height: 1.5;
+	margin: 0 0 0.65em 0;
+	text-align: center;
+	text-transform: uppercase;
+}
   
 
 blockquote, q {
@@ -1231,6 +1316,10 @@ body.is-preload #wrapper {
 	  width: 100% !important;
 	  margin-left: 0    !important;
 	}
+
+	.coming-soon-item__poster {
+	  min-height: 14rem;
+	}
   }
 
   /* ─────────────────────────────────────────────
@@ -1250,4 +1339,3 @@ body.is-preload #wrapper {
 /* body,
 #main,
 -#main *, */
-
