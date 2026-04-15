@@ -474,17 +474,17 @@ input, select, textarea {
 /* Basic */
 
 :root {
-	--tone-page-teal: #077d73;
-	--tone-page-teal-deep: #0b5c79;
-	--tone-page-green: #2c583f;
-	--tone-page-olive: #5a512a;
-	--tone-page-brown: #5c4028;
-	--tone-ink-strong: #1d1c17;
-	--tone-ink: #2d322e;
-	--tone-ink-soft: #5c625b;
-	--tone-panel: #f4f1ea;
-	--tone-placeholder: #c7d7ce;
-	--tone-placeholder-text: #21312d;
+	--tone-page-teal: #3e6239;
+	--tone-page-teal-deep: #243d21;
+	--tone-page-green: #304b2c;
+	--tone-page-olive: #59653a;
+	--tone-page-brown: #5b4932;
+	--tone-ink-strong: #171913;
+	--tone-ink: #2b3129;
+	--tone-ink-soft: #596055;
+	--tone-panel: #f1eee7;
+	--tone-placeholder: #bcc9b6;
+	--tone-placeholder-text: #203025;
 }
 
 html {
@@ -495,10 +495,10 @@ html {
 }
 body {
 	background-color: var(--tone-page-green);
-	background-image: linear-gradient(135deg, rgba(7, 125, 115, 0.84), rgba(92, 64, 40, 0.72)), url("images/overlay.png"), url("images/bg.jpg");
-	/* background-image: linear-gradient(135deg, rgba(7, 125, 115, 0.84), rgba(92, 64, 40, 0.72)), url("images/overlay.png"), url("images/alt_background.png"); */
-	background-repeat: no-repeat, repeat, no-repeat;
-	background-size: cover, auto, 100% 100%;
+	background-image: url("images/overlay.png"), linear-gradient(135deg, rgba(62, 98, 57, 0.76), rgba(36, 61, 33, 0.68)), url("images/bg.jpg");
+	/* background-image: url("images/overlay.png"), linear-gradient(135deg, rgba(62, 98, 57, 0.76), rgba(36, 61, 33, 0.68)), url("images/alt_background.png"); */
+	background-repeat: repeat, no-repeat, no-repeat;
+	background-size: auto, cover, 100% 100%;
 	background-attachment: fixed, fixed, fixed;
 	overflow-y: scroll;
 	color: var(--tone-ink) !important;
